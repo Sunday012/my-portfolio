@@ -30,6 +30,17 @@ export const bio = [
 
 export const timeline = [
   {
+    period: "2025 - Present",
+    title: "Software Engineer",
+    company: "ProxyMedicine",
+    mark: "PX",
+    accent: "blue",
+    logo: "/proxylogo.png",
+    href: "https://prxy.health",
+    description:
+      "I came back to ProxyMedicine and worked deeper across the telehealth platform, shipping urgent care, weight-loss, lab orders, medications, refills, appointments, payment flows, provider workflows, and Alfie, the AI health assistant.",
+  },
+  {
     period: "2025 - 2026",
     title: "Software Engineer",
     company: "StatwellMD",
@@ -39,17 +50,6 @@ export const timeline = [
     href: "https://statwellmd.com",
     description:
       "Built authenticated telemedicine features across consultations, prescriptions, records, scheduling, payments, patient dashboards, admin workflows, OTP verification, RBAC, and protected data fetching.",
-  },
-  {
-    period: "2025 - 2026",
-    title: "Software Engineer",
-    company: "ProxyMedicine",
-    mark: "PX",
-    accent: "blue",
-    logo: "/proxylogo.png",
-    href: "https://prxy.health",
-    description:
-      "I came back to ProxyMedicine and worked deeper across the telehealth platform, shipping urgent care, weight-loss, lab orders, medications, refills, appointments, payment flows, provider workflows, and Alfie, the AI health assistant.",
   },
   {
     period: "2024 - 2025",
@@ -74,7 +74,7 @@ export const timeline = [
       "I first joined ProxyMedicine as a starting developer, learning the product surface while contributing to patient dashboards, onboarding flows, appointment experiences, healthcare tasks, and API-connected UI work.",
   },
   {
-    period: "2024 - 2026",
+    period: "2024 - Present",
     title: "Software Engineer",
     company: "Demz-Aminytics AI",
     mark: "DA",
