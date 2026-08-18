@@ -23,13 +23,15 @@ export default function MusicPage() {
             music
           </h1>
           <p className="mt-6 text-base leading-7 text-neutral-700">
-            Some music I keep around while working, walking, or cooling my head.
-            The list leans Nigerian and African, because that sound is home.
+            Gospel music I keep around while working, walking, praying, or
+            cooling my head. The list leans classic worship, gratitude songs,
+            Jesus-centered songs, and a few faith-adjacent tracks I keep coming
+            back to.
           </p>
           <ul className="mt-5 list-disc space-y-1 pl-10 text-base leading-7 text-neutral-700">
-            <li>I like rhythm that gives a work session momentum.</li>
-            <li>I like clean melodies, warm production, and songs with replay value.</li>
-            <li>I especially enjoy music that can move between focus and celebration.</li>
+            <li>I like songs that point my attention back to God.</li>
+            <li>I like worship that can sit quietly with focus and prayer.</li>
+            <li>I especially enjoy songs about gratitude, surrender, and Jesus.</li>
           </ul>
         </div>
 

@@ -16,6 +16,23 @@ export const metadata: Metadata = {
   title: "Favour Sunday - Software Engineer",
   description:
     "Portfolio of Favour Sunday, a software engineer building fullstack products, AI tools, healthcare workflows, and developer systems.",
+  icons: {
+    icon: [
+      { url: "/avatar-favico-crop/favicon.ico" },
+      {
+        url: "/avatar-favico-crop/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+      {
+        url: "/avatar-favico-crop/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+    ],
+    apple: "/avatar-favico-crop/apple-touch-icon.png",
+  },
+  manifest: "/avatar-favico-crop/site.webmanifest",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
