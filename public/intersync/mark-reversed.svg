@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Intersync reversed symbol</title>
+  <desc id="desc">A white folded S-shaped symbol joined by a coral sync point.</desc>
+  <path fill="#FFFFFF" d="M365 72H250c-12 0-22 5-31 14l-45 42c-16 15-9 35 13 49 46 29 83 44 120 51-29-17-51-32-55-47-3-12 3-22 14-32L365 72Z"/>
+  <path fill="#FFFFFF" d="M307 228c27 6 44 20 47 36 2 12-5 22-15 32l-65 65c-7 7-16 11-27 11H105l109-109c14-14 17-25 11-37-6-13-19-28-38-49 34 18 70 39 120 51Z"/>
+  <path fill="#FF4D45" d="M187 177c44 21 52 45 38 67l-31 30c34-21 69-37 113-46-48-15-86-34-120-51Z"/>
+</svg>
