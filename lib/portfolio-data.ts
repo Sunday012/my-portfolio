@@ -134,6 +134,7 @@ export const petProjects = [
     label: "Language tooling",
     visual: "compiler",
     href: "https://github.com/Sunday012/fplus-compiler",
+    watchId: "compiler",
     code: "tokens -> ast -> checks -> emit",
     description:
       "A compiler project built to understand programming languages from the inside out: lexical analysis, parsing, AST design, semantic validation, error handling, and the translation pipeline from source code into something executable.",
@@ -176,6 +177,17 @@ export const petProjects = [
     description:
       "A GitHub repository review tool built during Headstarter AI, combining static analysis signals with a productized feedback experience.",
     stack: ["GitHub", "SonarQube", "React", "APIs"],
+  },
+];
+
+export const portfolioVideos = [
+  {
+    id: "compiler",
+    title: "Compiler walkthrough",
+    platform: "Descript",
+    url: "https://share.descript.com/view/n6F4M6xNvyU",
+    description:
+      "A walkthrough of the FPlus compiler, from turning source code into tokens and an AST to validation and output.",
   },
 ];
 

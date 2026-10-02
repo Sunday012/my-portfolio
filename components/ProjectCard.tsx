@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ProjectThumb } from "./ProjectThumb";
 
 type ProjectCardProps = {
@@ -6,6 +7,7 @@ type ProjectCardProps = {
   visual: string;
   image?: string;
   href?: string;
+  watchId?: string;
   code: string;
   description: string;
   stack: string[];
@@ -17,6 +19,7 @@ export function ProjectCard({
   visual,
   image,
   href,
+  watchId,
   code,
   description,
   stack,
@@ -47,7 +50,7 @@ export function ProjectCard({
           <span className="text-neutral-400"> - </span>
           {description}
         </p>
-        <div className="mt-5 flex flex-wrap gap-2">
+        <div className="mt-5 flex flex-wrap items-center gap-2">
           {stack.map((item) => (
             <span
               key={item}
@@ -56,6 +59,14 @@ export function ProjectCard({
               {item}
             </span>
           ))}
+          {watchId ? (
+            <Link
+              href={`/watch/${watchId}`}
+              className="rounded-full bg-neutral-950 px-3 py-1 text-xs font-semibold text-white transition hover:bg-neutral-700"
+            >
+              Watch video
+            </Link>
+          ) : null}
         </div>
       </div>
     </article>

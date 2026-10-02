@@ -3,6 +3,7 @@ import { socialLinks } from "@/lib/portfolio-data";
 const navLinks = [
   { label: "Work", href: "#work" },
   { label: "Projects", href: "#projects" },
+  { label: "Watch", href: "#watch" },
   { label: "Notes", href: "#notes" },
 ];
 

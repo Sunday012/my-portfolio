@@ -6,6 +6,7 @@ import { LectureImage } from "@/components/LectureImage";
 import { MiscLinks } from "@/components/MiscLinks";
 import { Projects } from "@/components/Projects";
 import { Timeline } from "@/components/Timeline";
+import { Videos } from "@/components/Videos";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Timeline />
         <Bio />
         <Projects />
+        <Videos />
         <LectureImage />
         <Capabilities />
         <MiscLinks />
