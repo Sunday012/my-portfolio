@@ -17,10 +17,7 @@ export function Videos() {
             >
               <VideoEmbed url={video.url} title={video.title} />
               <div className="pt-1">
-                <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-neutral-500">
-                  {video.platform} video
-                </p>
-                <h3 className="mt-3 text-2xl font-semibold tracking-tight text-neutral-950">
+                <h3 className="text-2xl font-semibold tracking-tight text-neutral-950">
                   {video.title}
                 </h3>
                 <p className="mt-3 text-base leading-7 text-neutral-600">
@@ -33,14 +30,6 @@ export function Videos() {
                   >
                     Open shareable page
                   </Link>
-                  <a
-                    href={video.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex text-sm font-semibold text-neutral-950 underline decoration-neutral-300 underline-offset-4 hover:decoration-neutral-950"
-                  >
-                    Open on {video.platform}
-                  </a>
                 </div>
               </div>
             </article>

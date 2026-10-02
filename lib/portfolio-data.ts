@@ -184,7 +184,6 @@ export const portfolioVideos = [
   {
     id: "compiler",
     title: "Compiler walkthrough",
-    platform: "Descript",
     url: "https://share.descript.com/view/n6F4M6xNvyU",
     description:
       "A walkthrough of the FPlus compiler, from turning source code into tokens and an AST to validation and output.",
