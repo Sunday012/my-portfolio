@@ -20,6 +20,7 @@ export const socialLinks = [
   { label: "GitHub", href: profile.github, short: "GH" },
   { label: "LinkedIn", href: profile.linkedin, short: "IN" },
   { label: "Email", href: `mailto:${profile.email}`, short: "@" },
+  { label: "Blog", href: "/blog", short: "BL" },
   { label: "Resume", href: "/favour-sunday-software-engineer-cv.pdf", short: "CV" },
 ];
 

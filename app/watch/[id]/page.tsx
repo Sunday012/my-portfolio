@@ -79,7 +79,13 @@ export default async function WatchPage({ params }: WatchPageProps) {
 
           <VideoEmbed url={video.url} title={video.title} />
 
-          <div className="mt-7 text-sm font-semibold">
+          <div className="mt-7 flex flex-wrap gap-x-5 gap-y-3 text-sm font-semibold">
+            <Link
+              href="/blog/building-fplus-compiler"
+              className="underline decoration-neutral-300 underline-offset-4 hover:decoration-neutral-950"
+            >
+              Read the compiler article
+            </Link>
             <a
               href="https://github.com/Sunday012/fplus-compiler"
               target="_blank"
