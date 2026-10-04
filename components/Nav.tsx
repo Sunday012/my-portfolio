@@ -1,24 +1,25 @@
+import Link from "next/link";
 import { socialLinks } from "@/lib/portfolio-data";
 
 const navLinks = [
-  { label: "Work", href: "#work" },
-  { label: "Projects", href: "#projects" },
-  { label: "Watch", href: "#watch" },
-  { label: "Notes", href: "#notes" },
+  { label: "Work", href: "/#work" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Watch", href: "/#watch" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export function Nav() {
   return (
     <header className="sticky top-0 z-20 border-b border-neutral-200/80 bg-white/85 backdrop-blur">
       <nav className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-5 sm:px-8">
-        <a href="#" className="font-semibold tracking-tight text-neutral-950">
+        <Link href="/" className="font-semibold tracking-tight text-neutral-950">
           Favour Sunday
-        </a>
+        </Link>
         <div className="hidden items-center gap-6 text-sm text-neutral-600 sm:flex">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="hover:text-neutral-950">
+            <Link key={link.href} href={link.href} className="hover:text-neutral-950">
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
         <div className="flex items-center gap-2">

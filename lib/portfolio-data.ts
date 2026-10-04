@@ -300,6 +300,12 @@ export const miscLinks = [
     after: " I think are worth reading slowly.",
   },
   {
+    before: "I write practical engineering notes on my ",
+    label: "blog",
+    href: "/blog",
+    after: ".",
+  },
+  {
     before: "Some of the ",
     label: "music",
     href: "/music",
