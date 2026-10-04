@@ -3,7 +3,7 @@ import { miscLinks } from "@/lib/portfolio-data";
 
 export function MiscLinks() {
   return (
-    <section className="bg-white pb-20">
+    <section className="bg-white pb-20 pt-16 sm:pt-20">
       <div className="mx-auto w-full max-w-5xl px-5 sm:px-8">
         <h2 className="text-3xl font-normal tracking-tight text-neutral-900">
           misc unsorted
