@@ -61,7 +61,7 @@ export const timeline = [
     logo: "/utomlogo.png",
     href: "https://utom.dev",
     description:
-      "Built developer-facing product pages, responsive interaction flows, reusable UI patterns, and server-connected app interfaces with React, Next.js, and TypeScript.",
+      "Built Utom's agentic product-development platform, creating responsive workflows where AI agents help turn product ideas into execution, alongside reusable UI systems and server-connected interfaces with React, Next.js, and TypeScript.",
   },
   {
     period: "2024",

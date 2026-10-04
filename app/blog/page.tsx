@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
@@ -36,27 +37,40 @@ export default function BlogPage() {
               </p>
               <Link
                 href={`/blog/${latestPost.slug}`}
-                className="group mt-6 grid gap-8 lg:grid-cols-[minmax(0,1.5fr)_minmax(15rem,0.65fr)] lg:items-end"
+                className="group mt-6 block"
               >
-                <div>
-                  <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-neutral-500">
-                    {latestPost.category}
-                  </p>
-                  <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight group-hover:underline group-hover:decoration-neutral-400 group-hover:underline-offset-4 sm:text-5xl sm:leading-[1.1]">
-                    {latestPost.title}
-                  </h2>
-                  <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-600">
-                    {latestPost.excerpt}
-                  </p>
-                </div>
-                <div className="border-l border-neutral-300 pl-6 text-sm text-neutral-500">
-                  <time dateTime={latestPost.isoDate}>
-                    {latestPost.publishedAt}
-                  </time>
-                  <p className="mt-1">{latestPost.readTime}</p>
-                  <p className="mt-6 font-semibold text-neutral-950 transition group-hover:translate-x-1">
-                    Read article →
-                  </p>
+                {latestPost.image ? (
+                  <div className="overflow-hidden rounded-lg border border-neutral-800 bg-neutral-950">
+                    <Image
+                      src={latestPost.image.src}
+                      alt={latestPost.image.alt}
+                      width={1672}
+                      height={941}
+                      className="aspect-video w-full object-cover transition duration-500 group-hover:scale-[1.015]"
+                    />
+                  </div>
+                ) : null}
+                <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1.5fr)_minmax(15rem,0.65fr)] lg:items-end">
+                  <div>
+                    <p className="font-mono text-xs font-medium uppercase tracking-[0.16em] text-neutral-500">
+                      {latestPost.category}
+                    </p>
+                    <h2 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight group-hover:underline group-hover:decoration-neutral-400 group-hover:underline-offset-4 sm:text-5xl sm:leading-[1.1]">
+                      {latestPost.title}
+                    </h2>
+                    <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-600">
+                      {latestPost.excerpt}
+                    </p>
+                  </div>
+                  <div className="border-l border-neutral-300 pl-6 text-sm text-neutral-500">
+                    <time dateTime={latestPost.isoDate}>
+                      {latestPost.publishedAt}
+                    </time>
+                    <p className="mt-1">{latestPost.readTime}</p>
+                    <p className="mt-6 font-semibold text-neutral-950 transition group-hover:translate-x-1">
+                      Read article →
+                    </p>
+                  </div>
                 </div>
               </Link>
             </div>
@@ -92,9 +106,19 @@ export default function BlogPage() {
                       {post.excerpt}
                     </p>
                   </div>
-                  <span className="hidden text-2xl text-neutral-400 transition group-hover:translate-x-1 group-hover:text-neutral-950 sm:block">
-                    →
-                  </span>
+                  {post.image ? (
+                    <Image
+                      src={post.image.src}
+                      alt=""
+                      width={320}
+                      height={180}
+                      className="hidden aspect-video w-40 rounded-md border border-neutral-200 object-cover sm:block"
+                    />
+                  ) : (
+                    <span className="hidden text-2xl text-neutral-400 transition group-hover:translate-x-1 group-hover:text-neutral-950 sm:block">
+                      →
+                    </span>
+                  )}
                 </Link>
               </article>
             ))}

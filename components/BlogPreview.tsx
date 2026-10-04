@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { blogPosts } from "@/lib/blog-data";
 import { SectionHeading } from "./SectionHeading";
@@ -27,7 +28,7 @@ export function BlogPreview() {
 
         <Link
           href={`/blog/${latestPost.slug}`}
-          className="group grid gap-5 border-t border-neutral-300 py-6 sm:grid-cols-[9rem_1fr_auto] sm:items-start sm:gap-8"
+          className="group grid gap-5 border-t border-neutral-300 py-6 sm:grid-cols-[9rem_1fr] sm:items-start sm:gap-8 lg:grid-cols-[9rem_1fr_18rem]"
         >
           <div className="text-sm text-neutral-500">
             <time dateTime={latestPost.isoDate}>{latestPost.publishedAt}</time>
@@ -44,9 +45,15 @@ export function BlogPreview() {
               {latestPost.excerpt}
             </p>
           </div>
-          <span className="hidden text-2xl text-neutral-400 transition group-hover:translate-x-1 group-hover:text-neutral-950 sm:block">
-            →
-          </span>
+          {latestPost.image ? (
+            <Image
+              src={latestPost.image.src}
+              alt=""
+              width={576}
+              height={324}
+              className="aspect-video w-full rounded-md border border-neutral-300 object-cover sm:col-start-2 lg:col-start-3 lg:row-start-1"
+            />
+          ) : null}
         </Link>
       </div>
     </section>

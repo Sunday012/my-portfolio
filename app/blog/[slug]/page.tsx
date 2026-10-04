@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/Footer";
@@ -81,6 +82,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
             </div>
           </header>
+
+          {post.image ? (
+            <div className="mx-auto w-full max-w-5xl px-5 pt-10 sm:px-8 sm:pt-14">
+              <Image
+                src={post.image.src}
+                alt={post.image.alt}
+                width={1672}
+                height={941}
+                priority
+                className="aspect-video w-full rounded-lg border border-neutral-800 bg-neutral-950 object-cover shadow-[0_24px_70px_rgba(0,0,0,0.16)]"
+              />
+            </div>
+          ) : null}
 
           <div className="mx-auto w-full max-w-3xl px-5 py-14 sm:px-8 sm:py-20">
             <div className="space-y-12">

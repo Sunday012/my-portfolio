@@ -12,6 +12,10 @@ export type BlogPost = {
   publishedAt: string;
   isoDate: string;
   readTime: string;
+  image?: {
+    src: string;
+    alt: string;
+  };
   sections: BlogSection[];
 };
 
@@ -25,6 +29,10 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "October 4, 2026",
     isoDate: "2026-10-04",
     readTime: "8 min read",
+    image: {
+      src: "/blog/rbac-scopes.png",
+      alt: "Abstract layered access boundaries showing roles passing through scoped permission gates",
+    },
     sections: [
       {
         heading: "A role is only the starting point",
@@ -82,6 +90,10 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "October 3, 2026",
     isoDate: "2026-10-03",
     readTime: "7 min read",
+    image: {
+      src: "/blog/compiler-pipeline.png",
+      alt: "Abstract compiler pipeline moving from source through tokens and a syntax tree to validated output",
+    },
     sections: [
       {
         heading: "Why build a compiler",
