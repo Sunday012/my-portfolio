@@ -3,9 +3,23 @@ import Link from "next/link";
 import { developerBooks, miscLinks, profile } from "@/lib/portfolio-data";
 
 export const metadata: Metadata = {
-  title: "Books - Favour Sunday",
+  title: "Software Engineering Books",
   description:
     "Developer books and technical reading notes from Favour Sunday.",
+  alternates: { canonical: "/books" },
+  openGraph: {
+    type: "website",
+    url: "/books",
+    title: "Software Engineering Books | Favour Sunday",
+    description: "Developer books and technical reading notes from Favour Sunday.",
+    images: [],
+  },
+  twitter: {
+    card: "summary",
+    title: "Software Engineering Books | Favour Sunday",
+    description: "Developer books and technical reading notes from Favour Sunday.",
+    images: [],
+  },
 };
 
 export default function BooksPage() {

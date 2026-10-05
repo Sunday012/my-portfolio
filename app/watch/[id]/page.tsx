@@ -29,11 +29,14 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${video.title} | Favour Sunday`,
+    title: video.title,
     description: video.description,
+    alternates: { canonical: `/watch/${video.id}` },
     openGraph: {
       title: `${video.title} | Favour Sunday`,
       description: video.description,
+      type: "video.other",
+      url: `/watch/${video.id}`,
       images: [],
     },
     twitter: {

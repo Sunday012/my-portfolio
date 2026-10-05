@@ -1,4 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is Favour Sunday's portfolio, built with Next.js.
+
+## Private blog editor
+
+The public blog works from the articles in `lib/blog-data.ts` without any
+external service. A Supabase-backed editor is available at `/admin/blog` once
+it is configured:
+
+1. Create a Supabase project.
+2. Run `supabase/migrations/20261005000000_create_blog_posts.sql` in the
+   Supabase SQL editor.
+3. In Supabase Authentication, create the email/password user
+   `sundayfavour997@gmail.com`. Disable public sign-ups because this editor is
+   private.
+4. Copy `.env.example` to `.env.local` and add the project's URL and
+   publishable key. Add the same values to the deployed site's environment.
+
+Published database articles appear on the public blog. Drafts and all write
+operations are protected by row-level security and are available only to the
+configured admin email.
+
+## Search indexing
+
+The production canonical URL is `https://favoursunday.dev`. After deploying,
+add that domain to Google Search Console, submit
+`https://favoursunday.dev/sitemap.xml`, and optionally add the supplied Google
+verification token as `GOOGLE_SITE_VERIFICATION` in the deployment environment.
 
 ## Getting Started
 

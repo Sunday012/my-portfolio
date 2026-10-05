@@ -17,6 +17,7 @@ export type BlogPost = {
     alt: string;
   };
   sections: BlogSection[];
+  published?: boolean;
 };
 
 export const blogPosts: BlogPost[] = [

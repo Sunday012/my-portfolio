@@ -3,8 +3,22 @@ import Link from "next/link";
 import { miscLinks, musicPicks, profile } from "@/lib/portfolio-data";
 
 export const metadata: Metadata = {
-  title: "Music - Favour Sunday",
+  title: "Music",
   description: "Music picks and listening notes from Favour Sunday.",
+  alternates: { canonical: "/music" },
+  openGraph: {
+    type: "website",
+    url: "/music",
+    title: "Music | Favour Sunday",
+    description: "Music picks and listening notes from Favour Sunday.",
+    images: [],
+  },
+  twitter: {
+    card: "summary",
+    title: "Music | Favour Sunday",
+    description: "Music picks and listening notes from Favour Sunday.",
+    images: [],
+  },
 };
 
 export default function MusicPage() {

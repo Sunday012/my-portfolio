@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { blogPosts } from "@/lib/blog-data";
+import { getPublishedBlogPosts } from "@/lib/blog-store";
 import { SectionHeading } from "./SectionHeading";
 
-export function BlogPreview() {
+export async function BlogPreview() {
+  const blogPosts = await getPublishedBlogPosts();
   const [latestPost] = blogPosts;
 
   if (!latestPost) {

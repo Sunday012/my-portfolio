@@ -4,7 +4,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
-import { blogPosts, getBlogPost } from "@/lib/blog-data";
+import { blogPosts } from "@/lib/blog-data";
+import { getPublishedBlogPost } from "@/lib/blog-store";
+import { absoluteUrl, siteName } from "@/lib/site-config";
 
 type BlogPostPageProps = {
   params: Promise<{ slug: string }>;
@@ -14,45 +16,82 @@ export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
 }
 
+export const revalidate = 60;
+
 export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = getBlogPost(slug);
+  const post = await getPublishedBlogPost(slug);
 
   if (!post) {
     return { title: "Post not found | Favour Sunday" };
   }
 
   return {
-    title: `${post.title} | Favour Sunday`,
+    title: post.title,
     description: post.excerpt,
+    alternates: { canonical: `/blog/${post.slug}` },
+    authors: [{ name: siteName, url: "/" }],
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: "article",
+      url: `/blog/${post.slug}`,
+      siteName: `${siteName} Portfolio`,
       publishedTime: post.isoDate,
-      images: [],
+      authors: [siteName],
+      images: post.image
+        ? [{ url: post.image.src, alt: post.image.alt }]
+        : [],
     },
     twitter: {
-      card: "summary",
+      card: post.image ? "summary_large_image" : "summary",
       title: post.title,
       description: post.excerpt,
-      images: [],
+      images: post.image ? [post.image.src] : [],
     },
   };
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
-  const post = getBlogPost(slug);
+  const post = await getPublishedBlogPost(slug);
 
   if (!post) {
     notFound();
   }
 
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.isoDate,
+    dateModified: post.isoDate,
+    mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
+    image: post.image ? absoluteUrl(post.image.src) : undefined,
+    author: {
+      "@type": "Person",
+      "@id": `${absoluteUrl("/")}#person`,
+      name: siteName,
+      url: absoluteUrl("/"),
+    },
+    publisher: {
+      "@type": "Person",
+      "@id": `${absoluteUrl("/")}#person`,
+      name: siteName,
+    },
+  };
+
   return (
     <div className="flex min-h-screen flex-col bg-white text-neutral-950">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleStructuredData).replace(/</g, "\\u003c"),
+        }}
+      />
       <Nav />
       <main className="flex-1">
         <article>

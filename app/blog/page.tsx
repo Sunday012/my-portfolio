@@ -3,15 +3,34 @@ import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
-import { blogPosts } from "@/lib/blog-data";
+import { getPublishedBlogPosts } from "@/lib/blog-store";
 
 export const metadata: Metadata = {
-  title: "Blog | Favour Sunday",
+  title: "Software Engineering Blog",
   description:
     "Notes from Favour Sunday on fullstack engineering, AI systems, developer tools, healthcare software, and product craft.",
+  alternates: { canonical: "/blog" },
+  openGraph: {
+    type: "website",
+    url: "/blog",
+    title: "Software Engineering Blog | Favour Sunday",
+    description:
+      "Technical articles by Favour Sunday about fullstack engineering, AI systems, developer tools, healthcare software, and product craft.",
+    images: [],
+  },
+  twitter: {
+    card: "summary",
+    title: "Software Engineering Blog | Favour Sunday",
+    description:
+      "Technical articles by Favour Sunday about fullstack engineering, AI systems, developer tools, healthcare software, and product craft.",
+    images: [],
+  },
 };
 
-export default function BlogPage() {
+export const revalidate = 60;
+
+export default async function BlogPage() {
+  const blogPosts = await getPublishedBlogPosts();
   const [latestPost, ...olderPosts] = blogPosts;
 
   return (

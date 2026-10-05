@@ -3,8 +3,22 @@ import Link from "next/link";
 import { miscLinks, moviePicks, profile } from "@/lib/portfolio-data";
 
 export const metadata: Metadata = {
-  title: "Movies - Favour Sunday",
+  title: "Movies",
   description: "Movie picks and story notes from Favour Sunday.",
+  alternates: { canonical: "/movies" },
+  openGraph: {
+    type: "website",
+    url: "/movies",
+    title: "Movies | Favour Sunday",
+    description: "Movie picks and story notes from Favour Sunday.",
+    images: [],
+  },
+  twitter: {
+    card: "summary",
+    title: "Movies | Favour Sunday",
+    description: "Movie picks and story notes from Favour Sunday.",
+    images: [],
+  },
 };
 
 export default function MoviesPage() {
