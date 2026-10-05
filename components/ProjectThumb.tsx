@@ -17,6 +17,11 @@ const visuals = {
     accent: "bg-[#67d7a7]",
     lines: ["diff", "judge", "module", "sync"],
   },
+  sabisafe: {
+    bg: "bg-[#17202a]",
+    accent: "bg-[#4ade80]",
+    lines: ["report", "verify", "alert", "respond"],
+  },
   rag: {
     bg: "bg-[#161a2f]",
     accent: "bg-[#8fb4ff]",

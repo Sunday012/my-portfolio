@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ButtonClickSound } from "@/components/ButtonClickSound";
 import { StructuredData } from "@/components/StructuredData";
 import { profile } from "@/lib/portfolio-data";
 import { siteDescription, siteName, siteUrl } from "@/lib/site-config";
@@ -102,6 +103,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <StructuredData />
+        <ButtonClickSound />
         {children}
       </body>
     </html>

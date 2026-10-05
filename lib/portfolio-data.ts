@@ -153,6 +153,17 @@ export const petProjects = [
     stack: ["Go", "OpenAI", "net/http", "CLI", "Embedded UI"],
   },
   {
+    title: "Sabisafe",
+    label: "Safety product",
+    visual: "sabisafe",
+    image: "/sabisafe.svg",
+    href: "https://sabisafe.vercel.app/",
+    code: "report -> verify -> alert -> respond",
+    description:
+      "A safety-focused product for turning incident reports into clearer response workflows, with practical flows for reporting, verification, alerts, and follow-up.",
+    stack: ["Safety Tech", "Product Design", "Workflows", "Alerts"],
+  },
+  {
     title: "RAG Support Agent",
     label: "AI customer support",
     visual: "rag",

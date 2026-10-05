@@ -8,7 +8,6 @@ type ProjectCardProps = {
   image?: string;
   href?: string;
   watchId?: string;
-  code: string;
   description: string;
   stack: string[];
 };
@@ -20,7 +19,6 @@ export function ProjectCard({
   image,
   href,
   watchId,
-  code,
   description,
   stack,
 }: ProjectCardProps) {
@@ -46,8 +44,6 @@ export function ProjectCard({
           <span className="text-sm text-neutral-500">{label}</span>
         </div>
         <p className="mt-3 text-base leading-7 text-neutral-600">
-          <span className="font-mono text-sm text-neutral-500">{code}</span>
-          <span className="text-neutral-400"> - </span>
           {description}
         </p>
         <div className="mt-5 flex flex-wrap items-center gap-2">
