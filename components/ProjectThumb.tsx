@@ -44,7 +44,7 @@ type VisualKey = keyof typeof visuals;
 export function ProjectThumb({ visual, title, image }: ProjectThumbProps) {
   const item = visuals[(visual as VisualKey) || "compiler"] ?? visuals.compiler;
 
-  if (image && visual !== "review") {
+  if (image) {
     return (
       <div
         className={`relative aspect-[4/3] w-full overflow-hidden rounded-md ${item.bg} p-4`}
@@ -76,17 +76,6 @@ export function ProjectThumb({ visual, title, image }: ProjectThumbProps) {
           <span className="size-2 rounded-full bg-white/35" />
           <span className="size-2 rounded-full bg-white/20" />
         </div>
-        {image && visual !== "review" ? (
-          <div className="mb-4 flex h-12 items-center rounded-sm bg-white px-3">
-            <Image
-              src={image}
-              alt={`${title} logo`}
-              width={180}
-              height={48}
-              className="max-h-8 w-auto object-contain"
-            />
-          </div>
-        ) : null}
         <div className="space-y-2">
           {item.lines.map((line, index) => (
             <div
@@ -101,15 +90,9 @@ export function ProjectThumb({ visual, title, image }: ProjectThumbProps) {
             </div>
           ))}
         </div>
-        {image && visual === "review" ? (
-          <div className="absolute bottom-3 right-3 size-12 overflow-hidden rounded-[0.9rem] shadow-[0_8px_24px_rgba(0,0,0,0.3)] ring-1 ring-white/15">
-            <Image src={image} alt={`${title} logo`} width={48} height={48} />
-          </div>
-        ) : (
-          <div className="absolute bottom-3 right-3 flex size-12 items-center justify-center rounded-full bg-white text-sm font-bold text-neutral-950">
-            {title.slice(0, 2).toUpperCase()}
-          </div>
-        )}
+        <div className="absolute bottom-3 right-3 flex size-12 items-center justify-center rounded-full bg-white text-sm font-bold text-neutral-950">
+          {title.slice(0, 2).toUpperCase()}
+        </div>
       </div>
     </div>
   );
