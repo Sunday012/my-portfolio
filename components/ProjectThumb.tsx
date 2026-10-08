@@ -22,10 +22,10 @@ const visuals = {
     accent: "bg-[#4ade80]",
     lines: ["report", "verify", "alert", "respond"],
   },
-  rag: {
-    bg: "bg-[#161a2f]",
-    accent: "bg-[#8fb4ff]",
-    lines: ["docs", "vectors", "context", "answer"],
+  ziggo: {
+    bg: "bg-[#10251d]",
+    accent: "bg-[#dbf97e]",
+    lines: ["retrieve", "reason", "approve", "resolve"],
   },
   flashcards: {
     bg: "bg-[#21192b]",

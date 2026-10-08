@@ -164,13 +164,15 @@ export const petProjects = [
     stack: ["Safety Tech", "Product Design", "Workflows", "Alerts"],
   },
   {
-    title: "RAG Support Agent",
-    label: "AI customer support",
-    visual: "rag",
-    code: "index -> retrieve -> answer -> improve",
+    title: "Ziggo",
+    label: "Agentic AI customer support",
+    visual: "ziggo",
+    image: "/ziggo-mark.png",
+    href: "https://ziggo-red.vercel.app/",
+    code: "retrieve -> reason -> approve -> act -> audit",
     description:
-      "An interactive customer-support assistant with a custom retrieval pipeline, Pinecone-backed context, and a conversational product surface.",
-    stack: ["Next.js", "OpenAI", "Pinecone", "LangChain"],
+      "An agentic customer-support workspace that retrieves organization-scoped knowledge, persists conversations and tool traces, and gates human handoffs behind explicit approval.",
+    stack: ["Next.js", "OpenRouter", "Pinecone", "Supabase", "Clerk"],
   },
   {
     title: "SaaS Flashcards",
