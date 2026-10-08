@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title description">
+  <title id="title">Reporithm</title>
+  <desc id="description">Four mint analysis bars on a dark rounded square.</desc>
+  <rect x="2" y="2" width="60" height="60" rx="17" fill="#181b17"/>
+  <rect x="2.75" y="2.75" width="58.5" height="58.5" rx="16.25" fill="none" stroke="#30362e" stroke-width="1.5"/>
+  <rect x="20" y="25" width="5" height="14" rx="2.5" fill="#6ee7b7"/>
+  <rect x="27" y="16" width="5" height="32" rx="2.5" fill="#6ee7b7"/>
+  <rect x="34" y="21" width="5" height="22" rx="2.5" fill="#6ee7b7"/>
+  <rect x="41" y="25" width="5" height="14" rx="2.5" fill="#6ee7b7"/>
+</svg>
