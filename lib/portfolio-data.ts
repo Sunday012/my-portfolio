@@ -188,6 +188,7 @@ export const petProjects = [
     label: "Hackathon top 3",
     visual: "review",
     image: "/reporithm-mark.png",
+    href: "https://reporithm.vercel.app/",
     code: "inspect -> analyze -> prioritize -> improve",
     description:
       "A repository intelligence platform that combines live GitHub signals with SonarQube deep analysis to surface quality gates, bugs, vulnerabilities, coverage, duplication, technical debt, and prioritized fixes.",
