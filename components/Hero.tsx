@@ -55,7 +55,10 @@ export function Hero() {
 
         <div className="max-w-2xl pt-3">
           <h1 className="text-4xl font-semibold tracking-tight text-neutral-950 sm:text-5xl">
-            Hey, I&apos;m {profile.name}. {profile.role}.
+            <span className="md:hidden">{profile.name}</span>
+            <span className="hidden md:inline">
+              Hey, I&apos;m {profile.name}. {profile.role}.
+            </span>
           </h1>
           <p className="mt-4 max-w-xl text-lg leading-8 text-neutral-700">
             {profile.summary}

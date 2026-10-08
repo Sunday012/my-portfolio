@@ -115,7 +115,7 @@ export const timeline = [
     logo: "/headstarterlogo.png",
     href: "https://www.headstarter.co/",
     description:
-      "Built five AI products in five weeks with Next.js, Firebase, Clerk, OpenAI, Pinecone, LangChain, Stripe, and Groq; placed top 3 with a repository review tool.",
+      "Built five AI products in five weeks with Next.js, Firebase, Clerk, OpenAI, Pinecone, LangChain, Stripe, and Groq; placed top 3 with Reporithm, a repository intelligence and code-quality platform.",
   },
   {
     period: "Present",
@@ -184,13 +184,13 @@ export const petProjects = [
     stack: ["Next.js", "Groq", "Stripe", "Clerk"],
   },
   {
-    title: "Repo Review Tool",
+    title: "Reporithm",
     label: "Hackathon top 3",
     visual: "review",
-    code: "scan -> score -> explain -> ship",
+    code: "inspect -> analyze -> prioritize -> improve",
     description:
-      "A GitHub repository review tool built during Headstarter AI, combining static analysis signals with a productized feedback experience.",
-    stack: ["GitHub", "SonarQube", "React", "APIs"],
+      "A repository intelligence platform that combines live GitHub signals with SonarQube deep analysis to surface quality gates, bugs, vulnerabilities, coverage, duplication, technical debt, and prioritized fixes.",
+    stack: ["Next.js", "TypeScript", "GitHub API", "SonarQube"],
   },
 ];
 

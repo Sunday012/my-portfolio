@@ -34,8 +34,8 @@ const visuals = {
   },
   review: {
     bg: "bg-[#1c1f24]",
-    accent: "bg-[#ff7a70]",
-    lines: ["repo", "scan", "score", "notes"],
+    accent: "bg-[#6ee7b7]",
+    lines: ["github", "sonar", "quality gate", "priorities"],
   },
 };
 
