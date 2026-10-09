@@ -12,7 +12,7 @@ export const profile = {
     "Go and TypeScript systems",
     "Healthcare-grade product flows",
     "AI integrations and RAG",
-    "Dashboard UX and design systems",
+    "Design Systems",
   ],
 };
 
