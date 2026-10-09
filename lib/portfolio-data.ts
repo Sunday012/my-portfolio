@@ -153,17 +153,6 @@ export const petProjects = [
     stack: ["Go", "OpenAI", "net/http", "CLI", "Embedded UI"],
   },
   {
-    title: "Sabisafe",
-    label: "Safety product",
-    visual: "sabisafe",
-    image: "/sabisafe.svg",
-    href: "https://sabisafe.vercel.app/",
-    code: "report -> verify -> alert -> respond",
-    description:
-      "A safety-focused product for turning incident reports into clearer response workflows, with practical flows for reporting, verification, alerts, and follow-up.",
-    stack: ["Safety Tech", "Product Design", "Workflows", "Alerts"],
-  },
-  {
     title: "Ziggo",
     label: "Agentic AI customer support",
     visual: "ziggo",
@@ -175,15 +164,6 @@ export const petProjects = [
     stack: ["Next.js", "OpenRouter", "Pinecone", "Supabase", "Clerk"],
   },
   {
-    title: "SaaS Flashcards",
-    label: "AI study product",
-    visual: "flashcards",
-    code: "prompt -> cards -> review -> upgrade",
-    description:
-      "A flashcard generator powered by Llama 3.1 through Groq, with authentication, pricing plans, Stripe paywall logic, and a clean study workflow.",
-    stack: ["Next.js", "Groq", "Stripe", "Clerk"],
-  },
-  {
     title: "Reporithm",
     label: "Hackathon top 3",
     visual: "review",
@@ -193,6 +173,17 @@ export const petProjects = [
     description:
       "A repository intelligence platform that combines live GitHub signals with SonarQube deep analysis to surface quality gates, bugs, vulnerabilities, coverage, duplication, technical debt, and prioritized fixes.",
     stack: ["Next.js", "TypeScript", "GitHub API", "SonarQube"],
+  },
+  {
+    title: "Sabisafe",
+    label: "Safety product",
+    visual: "sabisafe",
+    image: "/sabisafe.svg",
+    href: "https://sabisafe.vercel.app/",
+    code: "report -> verify -> alert -> respond",
+    description:
+      "A safety-focused product for turning incident reports into clearer response workflows, with practical flows for reporting, verification, alerts, and follow-up.",
+    stack: ["Safety Tech", "Product Design", "Workflows", "Alerts"],
   },
 ];
 

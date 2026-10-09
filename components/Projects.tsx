@@ -1,6 +1,9 @@
+import Link from "next/link";
 import { petProjects } from "@/lib/portfolio-data";
 import { ProjectCard } from "./ProjectCard";
 import { SectionHeading } from "./SectionHeading";
+
+const featuredProjects = petProjects.slice(0, 5);
 
 export function Projects() {
   return (
@@ -9,9 +12,17 @@ export function Projects() {
         <SectionHeading eyebrow="Pet Projects" title="Small bets with real machinery" />
 
         <div className="bg-white/50">
-          {petProjects.map((project) => (
+          {featuredProjects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
+        </div>
+        <div className="mt-8 flex justify-center sm:justify-start">
+          <Link
+            href="/projects"
+            className="rounded-full border border-neutral-950 px-5 py-3 text-sm font-semibold text-neutral-950 transition hover:bg-neutral-950 hover:text-white"
+          >
+            View more projects
+          </Link>
         </div>
       </div>
     </section>
