@@ -131,6 +131,26 @@ export const timeline = [
 
 export const petProjects = [
   {
+    title: "CaseMeld",
+    label: "Complaint intelligence",
+    visual: "casemeld",
+    code: "ingest -> classify -> score -> match -> resolve",
+    description:
+      "A complaint-intelligence workspace that turns unstructured customer messages into categorized, prioritized, and connected cases, with sentiment signals, response targets, ownership recommendations, and reusable resolution context.",
+    stack: ["Next.js", "React", "TypeScript", "NLP", "Case Matching"],
+  },
+  {
+    title: "MedLink",
+    label: "Healthcare referral operations",
+    visual: "medlink",
+    image: "/medlink-logo.png",
+    href: "https://github.com/Sunday012/medlink",
+    code: "triage -> refer -> dispatch -> verify -> reconcile",
+    description:
+      "A healthcare referral-operations MVP for clinics, hospitals, and ambulance teams. I built authenticated patient intake, deterministic triage, QR-verified handoffs, dispatch workflows, PostgreSQL persistence, role-protected APIs, and explicit outage and demo states for low-connectivity environments.",
+    stack: ["React", "TanStack Start", "NestJS", "PostgreSQL", "TypeORM"],
+  },
+  {
     title: "Compiler",
     label: "Language tooling",
     visual: "compiler",

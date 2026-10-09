@@ -3,7 +3,17 @@ import { petProjects } from "@/lib/portfolio-data";
 import { ProjectCard } from "./ProjectCard";
 import { SectionHeading } from "./SectionHeading";
 
-const featuredProjects = petProjects.slice(0, 5);
+const featuredProjectTitles = [
+  "Compiler",
+  "Intersync",
+  "Ziggo",
+  "Reporithm",
+  "Sabisafe",
+];
+
+const featuredProjects = featuredProjectTitles.flatMap((title) =>
+  petProjects.filter((project) => project.title === title),
+);
 
 export function Projects() {
   return (
