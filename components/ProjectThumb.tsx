@@ -1,11 +1,5 @@
 import Image from "next/image";
 
-const caseMeldSteps = [
-  ["Classify", "96%"],
-  ["Prioritize", "High"],
-  ["Connect cases", "3 matches"],
-] as const;
-
 type ProjectThumbProps = {
   visual: string;
   title: string;
@@ -63,6 +57,7 @@ export function ProjectThumb({ visual, title, image }: ProjectThumbProps) {
   if (image) {
     return (
       <div
+        data-static-theme
         className={`relative aspect-[4/3] w-full overflow-hidden rounded-md ${item.bg} p-4`}
         aria-label={`${title} project preview`}
       >
@@ -83,33 +78,16 @@ export function ProjectThumb({ visual, title, image }: ProjectThumbProps) {
   if (visual === "casemeld") {
     return (
       <div
+        data-static-theme
         className="relative aspect-[4/3] w-full overflow-hidden rounded-md bg-[#f5f3ed] p-3 text-[#17251f]"
         aria-label="CaseMeld project preview"
       >
         <div className="absolute inset-0 opacity-45 [background-image:radial-gradient(#c8cec8_1px,transparent_1px)] [background-size:12px_12px]" />
-        <div className="relative flex h-full flex-col rounded-sm border border-[#d9ddd6] bg-[#fffefa]/95 p-3 shadow-sm">
-          <div className="flex items-center gap-2">
-            <span className="relative size-8 shrink-0 rounded-full bg-[#0d6b4f] shadow-sm">
-              <span className="absolute inset-[7px] rounded-full bg-[#fffefa]" />
-              <span className="absolute right-[-1px] top-1/2 size-3 -translate-y-1/2 rounded-full border-[3px] border-[#fffefa] bg-[#d85f33]" />
-            </span>
-            <span className="text-sm font-semibold tracking-[-0.04em]">
-              Case<span className="font-extrabold text-[#0d6b4f]">Meld</span>
-            </span>
-          </div>
-          <div className="mt-3 space-y-1.5">
-            {caseMeldSteps.map(([label, value]) => (
-              <div
-                key={label}
-                className="flex items-center justify-between rounded-sm border border-[#e1e4de] bg-white px-2 py-1.5"
-              >
-                <span className="text-[8px] font-semibold uppercase tracking-[0.12em] text-[#68736d]">
-                  {label}
-                </span>
-                <span className="text-[8px] font-bold text-[#0d6b4f]">{value}</span>
-              </div>
-            ))}
-          </div>
+        <div className="relative flex h-full items-center justify-center rounded-sm border border-[#d9ddd6] bg-[#fffefa]/95 p-3 shadow-sm">
+          <span className="relative size-12 shrink-0 rounded-full bg-[#0d6b4f] shadow-sm">
+            <span className="absolute inset-[10px] rounded-full bg-[#fffefa]" />
+            <span className="absolute right-[-2px] top-1/2 size-4 -translate-y-1/2 rounded-full border-[4px] border-[#fffefa] bg-[#d85f33]" />
+          </span>
         </div>
       </div>
     );
@@ -117,6 +95,7 @@ export function ProjectThumb({ visual, title, image }: ProjectThumbProps) {
 
   return (
     <div
+      data-static-theme
       className={`relative aspect-[4/3] w-full overflow-hidden rounded-md ${item.bg} p-3 text-white`}
       aria-label={`${title} project preview`}
     >

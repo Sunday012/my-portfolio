@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import { ButtonClickSound } from "@/components/ButtonClickSound";
 import { StructuredData } from "@/components/StructuredData";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { profile } from "@/lib/portfolio-data";
 import { siteDescription, siteName, siteUrl } from "@/lib/site-config";
 import "./globals.css";
@@ -15,6 +17,14 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const themeScript = `
+  try {
+    if (window.localStorage.getItem("portfolio-theme") === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+  } catch {}
+`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -99,11 +109,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Script id="portfolio-theme" strategy="beforeInteractive">
+          {themeScript}
+        </Script>
         <StructuredData />
         <ButtonClickSound />
+        <ThemeToggle />
         {children}
       </body>
     </html>

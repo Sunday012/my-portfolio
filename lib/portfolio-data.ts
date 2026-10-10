@@ -147,8 +147,8 @@ export const petProjects = [
     href: "https://github.com/Sunday012/medlink",
     code: "triage -> refer -> dispatch -> verify -> reconcile",
     description:
-      "A healthcare referral-operations MVP for clinics, hospitals, and ambulance teams. I built authenticated patient intake, deterministic triage, QR-verified handoffs, dispatch workflows, PostgreSQL persistence, role-protected APIs, and explicit outage and demo states for low-connectivity environments.",
-    stack: ["React", "TanStack Start", "NestJS", "PostgreSQL", "TypeORM"],
+      "A healthcare referral-operations MVP for patient intake, triage, dispatch, and QR-verified handoffs.",
+    stack: ["React", "NestJS", "PostgreSQL"],
   },
   {
     title: "Compiler",

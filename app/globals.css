@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  color-scheme: light;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #f5f5f5;
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -16,6 +25,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  transition: background-color 180ms ease, color 180ms ease;
 }
 
 html {
@@ -25,4 +35,95 @@ html {
 ::selection {
   background: #171717;
   color: #ffffff;
+}
+
+.dark ::selection {
+  background: #f5f5f5;
+  color: #171717;
+}
+
+/* Neutral utility colors are the portfolio's visual language. These mappings
+   preserve their hierarchy while translating the existing pages to dark mode. */
+.dark .bg-white {
+  background-color: #0a0a0a;
+}
+
+.dark .bg-white\/50 {
+  background-color: rgb(23 23 23 / 0.58);
+}
+
+.dark .bg-white\/85 {
+  background-color: rgb(10 10 10 / 0.86);
+}
+
+.dark [class~="bg-[#eef3f1]"] {
+  background-color: #101512;
+}
+
+.dark .bg-neutral-50,
+.dark .bg-neutral-100 {
+  background-color: #171717;
+}
+
+.dark .text-neutral-950,
+.dark .text-neutral-900,
+.dark .text-neutral-800 {
+  color: #f5f5f5;
+}
+
+.dark .text-neutral-700 {
+  color: #d4d4d4;
+}
+
+.dark .text-neutral-600 {
+  color: #b3b3b3;
+}
+
+.dark .text-neutral-500 {
+  color: #8f8f8f;
+}
+
+.dark .border-neutral-200,
+.dark .border-neutral-300 {
+  border-color: #303030;
+}
+
+.dark .border-neutral-400 {
+  border-color: #525252;
+}
+
+.dark .border-white {
+  border-color: #0a0a0a;
+}
+
+.dark .ring-neutral-200,
+.dark .ring-neutral-300 {
+  --tw-ring-color: #404040;
+}
+
+.dark .decoration-neutral-300,
+.dark .decoration-neutral-400 {
+  text-decoration-color: #525252;
+}
+
+.dark .text-blue-700 {
+  color: #7dd3fc;
+}
+
+.dark .hover\:text-blue-950:hover {
+  color: #bae6fd;
+}
+
+.dark :where(input, textarea, select) {
+  background-color: #171717;
+  color: #f5f5f5;
+}
+
+/* Project thumbnails are miniature brand artifacts and keep their own palette. */
+.dark [data-static-theme] .bg-white {
+  background-color: #ffffff;
+}
+
+.dark [data-static-theme] .text-neutral-950 {
+  color: #171717;
 }
