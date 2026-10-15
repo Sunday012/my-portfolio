@@ -145,7 +145,7 @@ export const petProjects = [
     label: "Healthcare referral operations",
     visual: "medlink",
     image: "/medlink-logo.png",
-    href: "https://github.com/Sunday012/medlink",
+    href: "https://medlink-sable.vercel.app/",
     code: "triage -> refer -> dispatch -> verify -> reconcile",
     description:
       "A healthcare referral-operations MVP for patient intake, triage, dispatch, and QR-verified handoffs.",
