@@ -134,6 +134,7 @@ export const petProjects = [
     title: "CaseMeld",
     label: "Complaint intelligence",
     visual: "casemeld",
+    href: "https://casemeld.vercel.app/",
     code: "ingest -> classify -> score -> match -> resolve",
     description:
       "A complaint-intelligence workspace that turns unstructured customer messages into categorized, prioritized, and connected cases, with sentiment signals, response targets, ownership recommendations, and reusable resolution context.",
