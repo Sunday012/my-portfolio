@@ -206,6 +206,16 @@ export const petProjects = [
       "A safety-focused product for turning incident reports into clearer response workflows, with practical flows for reporting, verification, alerts, and follow-up.",
     stack: ["Safety Tech", "Product Design", "Workflows", "Alerts"],
   },
+  {
+    title: "WyrmKeep",
+    label: "Smart contract security intelligence",
+    visual: "wyrmkeep",
+    href: "https://github.com/oswebdevteam/WyrmKeep",
+    code: "analyze -> recall -> trace -> report",
+    description:
+      "A memory-augmented smart contract audit platform that combines native multi-chain analysis, exploit-pattern recall, causal attack paths, and tenant-isolated reporting in one security workspace.",
+    stack: ["Rust", "React", "TypeScript", "Smart Contracts", "Graph Memory"],
+  },
 ];
 
 export const portfolioVideos = [

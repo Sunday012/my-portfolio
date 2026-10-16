@@ -47,6 +47,11 @@ const visuals = {
     accent: "bg-[#6ee7b7]",
     lines: ["github", "sonar", "quality gate", "priorities"],
   },
+  wyrmkeep: {
+    bg: "bg-[#06101e]",
+    accent: "bg-[#4b9cff]",
+    lines: ["analyze", "recall", "trace", "report"],
+  },
 };
 
 type VisualKey = keyof typeof visuals;
