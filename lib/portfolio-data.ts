@@ -142,7 +142,7 @@ export const petProjects = [
   },
   {
     title: "WyrmKeep",
-    label: "Smart contract security intelligence",
+    label: "Hackathon project · Smart contract security",
     visual: "wyrmkeep",
     image: "/wyrmkeep-mark.svg",
     href: "https://github.com/oswebdevteam/WyrmKeep",
@@ -197,7 +197,7 @@ export const petProjects = [
   },
   {
     title: "Reporithm",
-    label: "Hackathon top 3",
+    label: "Hackathon winner",
     visual: "review",
     image: "/reporithm-mark.png",
     href: "https://reporithm.vercel.app/",

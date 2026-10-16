@@ -88,10 +88,10 @@ export function ProjectThumb({ visual, title, image }: ProjectThumbProps) {
         aria-label="CaseMeld project preview"
       >
         <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(rgba(255,255,255,.18)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.18)_1px,transparent_1px)] [background-size:18px_18px]" />
-        <div className="relative flex h-full items-center justify-center rounded-sm border border-white/15 bg-black/25 p-3">
+        <div className="relative flex h-full items-center justify-center rounded-sm border border-[#d9ddd6] bg-white p-3">
           <span className="relative size-12 shrink-0 rounded-full bg-[#0d6b4f] shadow-sm">
-            <span className="absolute inset-[10px] rounded-full bg-[#06100c]" />
-            <span className="absolute right-[-2px] top-1/2 size-4 -translate-y-1/2 rounded-full border-[4px] border-[#06100c] bg-[#d85f33]" />
+            <span className="absolute inset-[10px] rounded-full bg-white" />
+            <span className="absolute right-[-2px] top-1/2 size-4 -translate-y-1/2 rounded-full border-[4px] border-white bg-[#d85f33]" />
           </span>
         </div>
       </div>
