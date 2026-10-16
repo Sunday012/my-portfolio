@@ -1,0 +1,13 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wyrmkeep-bg" x1="72" y1="48" x2="432" y2="464" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2F86FF"/>
+      <stop offset="1" stop-color="#0D4CB5"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="#050B14"/>
+  <g transform="rotate(-8 256 256)">
+    <rect x="91" y="91" width="330" height="330" rx="88" fill="url(#wyrmkeep-bg)" stroke="#DCEBFF" stroke-width="18"/>
+    <path d="M147 174L191 338L256 218L321 338L365 174" stroke="white" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

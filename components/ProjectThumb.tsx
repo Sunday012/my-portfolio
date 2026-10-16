@@ -84,14 +84,14 @@ export function ProjectThumb({ visual, title, image }: ProjectThumbProps) {
     return (
       <div
         data-static-theme
-        className="relative aspect-[4/3] w-full overflow-hidden rounded-md bg-[#f5f3ed] p-3 text-[#17251f]"
+        className="relative aspect-[4/3] w-full overflow-hidden rounded-md bg-[#06100c] p-3 text-white"
         aria-label="CaseMeld project preview"
       >
-        <div className="absolute inset-0 opacity-45 [background-image:radial-gradient(#c8cec8_1px,transparent_1px)] [background-size:12px_12px]" />
-        <div className="relative flex h-full items-center justify-center rounded-sm border border-[#d9ddd6] bg-[#fffefa]/95 p-3 shadow-sm">
+        <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(rgba(255,255,255,.18)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.18)_1px,transparent_1px)] [background-size:18px_18px]" />
+        <div className="relative flex h-full items-center justify-center rounded-sm border border-white/15 bg-black/25 p-3">
           <span className="relative size-12 shrink-0 rounded-full bg-[#0d6b4f] shadow-sm">
-            <span className="absolute inset-[10px] rounded-full bg-[#fffefa]" />
-            <span className="absolute right-[-2px] top-1/2 size-4 -translate-y-1/2 rounded-full border-[4px] border-[#fffefa] bg-[#d85f33]" />
+            <span className="absolute inset-[10px] rounded-full bg-[#06100c]" />
+            <span className="absolute right-[-2px] top-1/2 size-4 -translate-y-1/2 rounded-full border-[4px] border-[#06100c] bg-[#d85f33]" />
           </span>
         </div>
       </div>
