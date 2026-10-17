@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import { ButtonClickSound } from "@/components/ButtonClickSound";
 import { StructuredData } from "@/components/StructuredData";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -120,6 +121,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <ButtonClickSound />
         <ThemeToggle />
         {children}
+        <Analytics />
       </body>
     </html>
   );
