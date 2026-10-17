@@ -115,7 +115,7 @@ export const timeline = [
     logo: "/headstarterlogo.png",
     href: "https://www.headstarter.co/",
     description:
-      "Built five AI products in five weeks with Next.js, Firebase, Clerk, OpenAI, Pinecone, LangChain, Stripe, and Groq; placed top 3 with Reporithm, a repository intelligence and code-quality platform.",
+      "Built AI products with Next.js, Firebase, Clerk, OpenAI, Pinecone, LangChain, Stripe, and Groq.",
   },
   {
     period: "Present",
@@ -208,7 +208,7 @@ export const petProjects = [
   },
   {
     title: "Sabisafe",
-    label: "Safety product",
+    label: "Hackathon winner · Safety product",
     visual: "sabisafe",
     image: "/sabisafe.svg",
     href: "https://sabisafe.vercel.app/",
