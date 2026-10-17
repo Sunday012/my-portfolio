@@ -330,7 +330,7 @@ export const miscLinks = [
     before: "My ",
     label: "Intersync",
     href: "https://intersync.favoursunday.dev",
-    after: " repo is where I explore AI-assisted learning from real code changes.",
+    after: " app is where I explore AI-assisted learning from real code changes.",
   },
   {
     before: "I keep a short list of developer ",
