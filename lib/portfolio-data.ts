@@ -178,7 +178,7 @@ export const petProjects = [
     label: "Go CLI + AI backend",
     visual: "intersync",
     image: "/intersync/wordmark-primary.svg",
-    href: "https://github.com/Sunday012/intersync",
+    href: "https://intersync.favoursunday.dev",
     code: "detect -> judge -> generate -> merge -> write",
     description:
       "A developer tool that watches git diffs and turns meaningful code changes into generated learning modules. It includes a Go CLI, hosted backend, provider abstraction, bearer-token auth, embedded frontend, and post-commit hook installation.",
@@ -329,7 +329,7 @@ export const miscLinks = [
   {
     before: "My ",
     label: "Intersync",
-    href: "https://github.com/Sunday012/intersync",
+    href: "https://intersync.favoursunday.dev",
     after: " repo is where I explore AI-assisted learning from real code changes.",
   },
   {
